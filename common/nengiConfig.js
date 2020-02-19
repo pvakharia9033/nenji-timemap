@@ -1,4 +1,9 @@
 import nengi from 'nengi'
+import NetLog from './NetLog.js'
+import PlayerCharacter from './PlayerCharacter.js'
+import Asteroid from './Asteroid.js'
+import PlayerInput from './PlayerInput.js'
+import Identity from './Identity.js'
 
 const config = {
     UPDATE_RATE: 20, 
@@ -13,10 +18,18 @@ const config = {
     HISTORIAN_TICKS: 40,
 
     protocols: {
-        entities: [],
+        entities: [
+            ['PlayerCharacter', PlayerCharacter],
+            ['Asteroid', Asteroid]
+        ],
         localMessages: [],
-        messages: [],
-        commands: [],
+        messages: [
+            ['NetLog', NetLog],
+            ['Identity', Identity]
+        ],
+        commands: [
+            ['PlayerInput', PlayerInput]
+        ],
         basics: []
     }
 }

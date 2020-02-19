@@ -2,6 +2,8 @@ import { autoDetectRenderer, Container, settings, SCALE_MODES, IResourceDictiona
 import Background from './Background.js';
 import GameData from '../../common/GameData';
 
+settings.SCALE_MODE = SCALE_MODES.NEAREST
+
 let renderer = null
 let loaded_resources = {};
 
